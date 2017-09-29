@@ -85,33 +85,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-7D-kxT">
-                                <rect key="frame" x="20" y="233.5" width="335" height="200"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-7D-kxT">
+                                <rect key="frame" x="20" y="213.5" width="335" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWr-Li-vwB" customClass="ExpandableLabel" customModule="ExpandableLabelDemo" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="110" width="311" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static Label A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebg-zh-QXE">
+                                        <rect key="frame" x="8" y="8" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static Label B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pH-Ip-mqg">
+                                        <rect key="frame" x="8" y="41" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static Label C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXp-r7-H1M">
+                                        <rect key="frame" x="8" y="74" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWr-Li-vwB" customClass="ExpandableLabel" customModule="ExpandableLabelDemo" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="107" width="319" height="20.5"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Static label A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebg-zh-QXE">
-                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Static label A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pH-Ip-mqg">
-                                        <rect key="frame" x="8" y="37" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Static label A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXp-r7-H1M">
-                                        <rect key="frame" x="8" y="66" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -119,11 +116,21 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="yWr-Li-vwB" firstAttribute="leading" secondItem="ZNF-7D-kxT" secondAttribute="leading" constant="12" id="N2n-S1-8Nc"/>
-                                    <constraint firstAttribute="trailing" secondItem="yWr-Li-vwB" secondAttribute="trailing" constant="12" id="Qd7-mu-vfr"/>
-                                    <constraint firstAttribute="height" constant="200" id="UYQ-X2-Zux"/>
-                                    <constraint firstAttribute="bottom" secondItem="yWr-Li-vwB" secondAttribute="bottom" constant="20" id="n6G-50-es2"/>
-                                    <constraint firstItem="yWr-Li-vwB" firstAttribute="width" secondItem="ZNF-7D-kxT" secondAttribute="width" constant="-24" id="qHV-rI-oDB"/>
+                                    <constraint firstItem="dXp-r7-H1M" firstAttribute="width" secondItem="5pH-Ip-mqg" secondAttribute="width" id="0yt-cx-59Q"/>
+                                    <constraint firstItem="5pH-Ip-mqg" firstAttribute="top" secondItem="ebg-zh-QXE" secondAttribute="bottom" constant="12" id="6RX-4G-GKb"/>
+                                    <constraint firstItem="ebg-zh-QXE" firstAttribute="width" secondItem="ZNF-7D-kxT" secondAttribute="width" constant="-16" id="6a2-C5-ial"/>
+                                    <constraint firstItem="yWr-Li-vwB" firstAttribute="centerX" secondItem="dXp-r7-H1M" secondAttribute="centerX" id="Cot-jc-mGd"/>
+                                    <constraint firstItem="dXp-r7-H1M" firstAttribute="top" secondItem="5pH-Ip-mqg" secondAttribute="bottom" constant="12" id="HOK-rv-Ek6"/>
+                                    <constraint firstItem="5pH-Ip-mqg" firstAttribute="centerX" secondItem="ebg-zh-QXE" secondAttribute="centerX" id="OSa-x3-uTD"/>
+                                    <constraint firstItem="yWr-Li-vwB" firstAttribute="width" secondItem="dXp-r7-H1M" secondAttribute="width" id="UP5-OX-Z9n"/>
+                                    <constraint firstAttribute="height" constant="240" id="UYQ-X2-Zux"/>
+                                    <constraint firstItem="5pH-Ip-mqg" firstAttribute="width" secondItem="ebg-zh-QXE" secondAttribute="width" id="ZgM-59-6A2"/>
+                                    <constraint firstItem="ebg-zh-QXE" firstAttribute="leading" secondItem="ZNF-7D-kxT" secondAttribute="leading" constant="8" id="d64-ZC-IqT"/>
+                                    <constraint firstItem="dXp-r7-H1M" firstAttribute="centerX" secondItem="5pH-Ip-mqg" secondAttribute="centerX" id="lsC-4q-dbd"/>
+                                    <constraint firstItem="ebg-zh-QXE" firstAttribute="top" secondItem="ZNF-7D-kxT" secondAttribute="top" constant="8" id="mKd-21-NIv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ebg-zh-QXE" secondAttribute="trailing" constant="8" id="vTZ-MS-Evh"/>
+                                    <constraint firstItem="yWr-Li-vwB" firstAttribute="top" secondItem="dXp-r7-H1M" secondAttribute="bottom" constant="12" id="yED-Kb-8Hi"/>
+                                    <constraint firstAttribute="bottom" secondItem="yWr-Li-vwB" secondAttribute="bottom" constant="8" id="z0R-bR-2S9"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

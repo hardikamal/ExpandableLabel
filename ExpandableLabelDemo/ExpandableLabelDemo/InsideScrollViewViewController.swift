@@ -26,7 +26,7 @@ class InsideScrollViewViewController: UIViewController, ExpandableLabelDelegate 
 		expandableLabel.textReplacementType = .word
 		expandableLabel.numberOfLines = 3
 		expandableLabel.collapsed = true
-		expandableLabel.text = "This is some sample text to demonstrate using apploft's \"ExpandableLabel\" inside a UIScrollView. Using constraints, this label defines the .contentSize of the containing scroll view. There is enough text in this label to extend its height - when expanded - beyond the bounds of the scroll view, thus requiring / enabling scrolling when expanded, but not when collapsed."
+		expandableLabel.text = "This is some sample text to demonstrate using apploft's \"ExpandableLabel\" embedded inside a UIScrollView. There should be enough text in this label to extend its height - when expanded - beyond the bounds of the scroll view. This demonstrates that when expanded, there will be enough content inside the scroll view to require vertical scrolling, but not when collapsed."
 		
 	}
 
