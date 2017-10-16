@@ -123,6 +123,7 @@
 				TargetAttributes = {
 					BF4342991B416FDD002FDE1F = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = K9BJY9MA6C;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -284,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BJY9MA6C;
 				INFOPLIST_FILE = ExpandableLabelDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.apploft.$(PRODUCT_NAME:rfc1034identifier)";
@@ -296,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BJY9MA6C;
 				INFOPLIST_FILE = ExpandableLabelDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.apploft.$(PRODUCT_NAME:rfc1034identifier)";
