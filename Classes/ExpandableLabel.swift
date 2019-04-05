@@ -138,7 +138,7 @@ public class ExpandableLabel: UILabel {
         self.lineBreakMode = .byClipping
         self.numberOfLines = 3
         self.expandedAttributedLink = nil
-        self.collapsedAttributedLink = NSAttributedString(string: "More", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: font.pointSize)])
+        self.collapsedAttributedLink = NSAttributedString(string: "More", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: font.pointSize)])
         self.ellipsis = NSAttributedString(string: "...")
     }
     
@@ -184,7 +184,7 @@ public class ExpandableLabel: UILabel {
             let lineTextWithAddedLink = NSMutableAttributedString(attributedString: lineTextWithLastWordRemoved)
             if let ellipsis = self.ellipsis {
                 lineTextWithAddedLink.append(ellipsis)
-                lineTextWithAddedLink.append(NSAttributedString(string: " ", attributes: [NSFontAttributeName: self.font]))
+                lineTextWithAddedLink.append(NSAttributedString(string: " ", attributes: [NSAttributedString.Key.font: self.font as Any]))
             }
             lineTextWithAddedLink.append(linkName)
             let fits = self.textFitsWidth(lineTextWithAddedLink)
@@ -212,7 +212,7 @@ public class ExpandableLabel: UILabel {
         let linkText = NSMutableAttributedString()
         if let ellipsis = self.ellipsis {
             linkText.append(ellipsis)
-            linkText.append(NSAttributedString(string: " ", attributes: [NSFontAttributeName: self.font]))
+            linkText.append(NSAttributedString(string: " ", attributes: [NSAttributedString.Key.font: self.font as Any]))
         }
         linkText.append(linkName)
         
@@ -392,13 +392,13 @@ public class ExpandableLabel: UILabel {
         setLinkHighlighted(touches, event: event, highlighted: false)
     }
     
-    open func setLessLinkWith(lessLink: String, attributes: [String: AnyObject], position: NSTextAlignment?) {
+    open func setLessLinkWith(lessLink: String, attributes: [NSAttributedString.Key: AnyObject], position: NSTextAlignment?) {
         var alignedattributes = attributes
         if let pos = position {
             expandedLinkPosition = pos
             let titleParagraphStyle = NSMutableParagraphStyle()
             titleParagraphStyle.alignment = pos
-            alignedattributes[NSParagraphStyleAttributeName] = titleParagraphStyle
+            alignedattributes[NSAttributedString.Key.paragraphStyle] = titleParagraphStyle
             
         }
         expandedAttributedLink = NSMutableAttributedString(string: lessLink,
@@ -443,7 +443,7 @@ public class ExpandableLabel: UILabel {
 private extension NSAttributedString {
     func hasFontAttribute() -> Bool {
         guard !self.string.isEmpty else { return false }
-        let font = self.attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as? UIFont
+        let font = self.attribute(NSAttributedString.Key.font, at: 0, effectiveRange: nil) as? UIFont
         return font != nil
     }
     
@@ -454,14 +454,14 @@ private extension NSAttributedString {
         paragraphStyle.minimumLineHeight = font.lineHeight;
         paragraphStyle.maximumLineHeight = font.lineHeight;
         let copy = NSMutableAttributedString(attributedString: self)
-        copy.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSRange(location: 0, length: copy.length))
+        copy.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: copy.length))
         return copy
     }
     
     func copyWithAddedFontAttribute(_ font: UIFont) -> NSAttributedString {
         if !hasFontAttribute() {
             let copy = NSMutableAttributedString(attributedString: self)
-            copy.addAttribute(NSFontAttributeName, value: font, range: NSRange(location: 0, length: copy.length))
+            copy.addAttribute(NSAttributedString.Key.font, value: font, range: NSRange(location: 0, length: copy.length))
             return copy
         }
         return self.copy() as! NSAttributedString
@@ -469,12 +469,12 @@ private extension NSAttributedString {
     
     func copyWithHighlightedColor() -> NSAttributedString {
         let alphaComponent = CGFloat(0.5)
-        let baseColor: UIColor = (self.attribute(NSForegroundColorAttributeName, at: 0, effectiveRange: nil) as? UIColor)?.withAlphaComponent(alphaComponent) ??
+        let baseColor: UIColor = (self.attribute(NSAttributedString.Key.foregroundColor, at: 0, effectiveRange: nil) as? UIColor)?.withAlphaComponent(alphaComponent) ??
             UIColor.black.withAlphaComponent(alphaComponent)
         let highlightedCopy = NSMutableAttributedString(attributedString: self)
         let range = NSRange(location: 0, length: highlightedCopy.length)
-        highlightedCopy.removeAttribute(NSForegroundColorAttributeName, range: range)
-        highlightedCopy.addAttribute(NSForegroundColorAttributeName, value: baseColor, range: range)
+        highlightedCopy.removeAttribute(NSAttributedString.Key.foregroundColor, range: range)
+        highlightedCopy.addAttribute(NSAttributedString.Key.foregroundColor, value: baseColor, range: range)
         return highlightedCopy
     }
     
@@ -505,7 +505,7 @@ private extension NSAttributedString {
 extension String {
     var composedCount : Int {
         var count = 0
-        enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { _ in count += 1 }
+        enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { _,_,_,_  in count += 1 }
         return count
     }
 }

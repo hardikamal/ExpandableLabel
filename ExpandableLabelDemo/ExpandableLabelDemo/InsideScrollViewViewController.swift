@@ -17,7 +17,7 @@ class InsideScrollViewViewController: UIViewController, ExpandableLabelDelegate 
 		
 		expandableLabel.delegate = self
 		
-		let linkAttributes = [NSForegroundColorAttributeName:UIColor.red]
+        let linkAttributes = [NSAttributedStringKey.foregroundColor:UIColor.red]
 		
 		expandableLabel.collapsedAttributedLink = NSMutableAttributedString(string: " Read More", attributes: linkAttributes)
 		expandableLabel.expandedAttributedLink = NSMutableAttributedString(string: " Read Less", attributes: linkAttributes)

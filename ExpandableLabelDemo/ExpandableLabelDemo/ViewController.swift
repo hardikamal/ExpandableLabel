@@ -47,7 +47,7 @@ class ViewController: UITableViewController, ExpandableLabelDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ExpandableCell
         cell.expandableLabel.delegate = self
         
-        cell.expandableLabel.setLessLinkWith(lessLink: "Close", attributes: [NSForegroundColorAttributeName:UIColor.red], position: currentSource.textAlignment)
+        cell.expandableLabel.setLessLinkWith(lessLink: "Close", attributes: [NSAttributedStringKey.foregroundColor:UIColor.red], position: currentSource.textAlignment)
         
         cell.layoutIfNeeded()
         
@@ -142,19 +142,19 @@ class ViewController: UITableViewController, ExpandableLabelDelegate {
 extension String {
     
     func specialPriceAttributedStringWith(_ color: UIColor) -> NSMutableAttributedString {
-        let attributes = [NSStrikethroughStyleAttributeName: NSNumber(value: NSUnderlineStyle.styleSingle.rawValue as Int),
-                          NSForegroundColorAttributeName: color, NSFontAttributeName: fontForPrice()]
+        let attributes = [NSAttributedStringKey.strikethroughStyle: NSNumber(value: NSUnderlineStyle.styleSingle.rawValue as Int),
+                          NSAttributedStringKey.foregroundColor: color, NSAttributedStringKey.font: fontForPrice()]
         return NSMutableAttributedString(attributedString: NSAttributedString(string: self, attributes: attributes))
     }
     
     func priceAttributedStringWith(_ color: UIColor) -> NSAttributedString {
-        let attributes = [NSForegroundColorAttributeName: color, NSFontAttributeName: fontForPrice()]
+        let attributes = [NSAttributedStringKey.foregroundColor: color, NSAttributedStringKey.font: fontForPrice()]
         
         return NSAttributedString(string: self, attributes: attributes)
     }
     
     func priceAttributedString(_ color: UIColor) -> NSAttributedString {
-        let attributes = [NSForegroundColorAttributeName: color]
+        let attributes = [NSAttributedStringKey.foregroundColor: color]
         
         return NSAttributedString(string: self, attributes: attributes)
     }
