@@ -47,7 +47,7 @@ public class ExpandableLabel: UILabel {
     }
     
     /// The delegate of ExpandableLabel
-    open weak var delegate: ExpandableLabelDelegate?
+    @objc open weak var delegate: ExpandableLabelDelegate?
     
     /// Set 'true' if the label should be collapsed or 'false' for expanded.
     @IBInspectable open var collapsed: Bool = true {
@@ -72,7 +72,7 @@ public class ExpandableLabel: UILabel {
     
     /// Set the link name (and attributes) that is shown when collapsed.
     /// The default value is "More". Cannot be nil.
-    open var collapsedAttributedLink: NSAttributedString! {
+    @objc open var collapsedAttributedLink: NSAttributedString! {
         didSet {
             self.collapsedAttributedLink = collapsedAttributedLink.copyWithAddedFontAttribute(font)
         }
@@ -80,7 +80,7 @@ public class ExpandableLabel: UILabel {
     
     /// Set the link name (and attributes) that is shown when expanded.
     /// The default value is "Less". Can be nil.
-    open var expandedAttributedLink: NSAttributedString?
+    @objc open var expandedAttributedLink: NSAttributedString?
     
     /// Set the ellipsis that appears just after the text and before the link.
     /// The default value is "...". Can be nil.
